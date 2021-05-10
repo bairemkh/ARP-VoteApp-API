@@ -183,7 +183,16 @@ namespace WebAPI_SQL.Controllers
                     return "Yes";
                 if (max == no)
                     return "No";
+                if ((max == no) && (max == yes) && (max == retained))
+                    return "All votes are equal";
+                if ((max == no) && (max == yes))
+                    return "equal votes";
+                if ((max == retained) && (max == yes))
+                    return "equal votes";
+                if ((max == no) && (max == retained))
+                    return "equal votes";
                 return "Retained";
+
             }
             catch (Exception ex)
             {
