@@ -666,6 +666,15 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
         }
       },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
       "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
         "type": "package",
         "build": {
@@ -1675,6 +1684,33 @@
           }
         }
       },
+      "Select.HtmlToPdf.NetCore/21.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "Newtonsoft.Json": "12.0.1",
+          "System.Buffers": "4.5.0",
+          "System.Drawing.Common": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.1",
+          "System.Text.Encoding.CodePages": "4.5.1",
+          "System.Threading.Tasks.Extensions": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Select.HtmlToPdf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Select.HtmlToPdf.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/Select.Html.dep": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Select.Html.dep"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.1.2": {
         "type": "package",
         "dependencies": {
@@ -1922,7 +1958,7 @@
           "Microsoft.Win32.SystemEvents": "4.7.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/System.Drawing.Common.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Drawing.Common.dll": {}
@@ -3631,6 +3667,30 @@
         "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
+    "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+      "sha512": "1Am6l4Vpn3/K32daEqZI+FFr96OlZkgwK2LcT3pZ2zWubR5zTPW3/FkO1Rat9kb7oQOa4rxgl9LJHc5tspCWfg==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
       "sha512": "ojG5pGAhTPmjxRGTNvuszO3H8XPZqksDwr9xLd4Ae/JBjZZdl6GuoLk7uLMf+o7yl5wO0TAqoWcEKkEWqrZE5g==",
       "type": "package",
@@ -5170,6 +5230,29 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Select.HtmlToPdf.NetCore/21.1.0": {
+      "sha512": "UJmsaiCPFfYgqmRErX4A3Mk3mhYNEzmQYyMRUchunP//PWwXqgXhAixm6QkpIDfZZGlZWbZqvO9hBXtddrjYYg==",
+      "type": "package",
+      "path": "select.htmltopdf.netcore/21.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "contentFiles/any/any/Select.Html.dep",
+        "images/icon.png",
+        "lib/net461/Select.Html.dep",
+        "lib/net461/Select.HtmlToPdf.dll",
+        "lib/net461/Select.HtmlToPdf.xml",
+        "lib/net472/Select.Html.dep",
+        "lib/net472/Select.HtmlToPdf.dll",
+        "lib/net472/Select.HtmlToPdf.xml",
+        "lib/netstandard2.0/Select.Html.dep",
+        "lib/netstandard2.0/Select.HtmlToPdf.dll",
+        "lib/netstandard2.0/Select.HtmlToPdf.xml",
+        "readme.txt",
+        "select.htmltopdf.netcore.21.1.0.nupkg.sha512",
+        "select.htmltopdf.netcore.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.1.2": {
@@ -9126,6 +9209,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0-preview.3.21201.2",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.1",
       "Newtonsoft.Json >= 13.0.1",
+      "Select.HtmlToPdf.NetCore >= 21.1.0",
       "Swashbuckle.AspNetCore >= 6.1.2",
       "System.Data.SqlClient >= 4.8.2",
       "Wkhtmltopdf.NetCore >= 5.0.2-preview"
@@ -9211,6 +9295,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.1, )"
+          },
+          "Select.HtmlToPdf.NetCore": {
+            "target": "Package",
+            "version": "[21.1.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

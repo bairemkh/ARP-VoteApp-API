@@ -1,10 +1,13 @@
-﻿using System;
+﻿using SelectPdf;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using WebAPI_SQL.Entities;
+using WebAPI_SQL.Services;
 
 namespace WebAPI_SQL.Useful_Stuff
 {
@@ -38,7 +41,7 @@ namespace WebAPI_SQL.Useful_Stuff
         {
             try
             {
-                SqlCommand command = new SqlCommand("SELECT TOP 1 Duration,Date,Time,Subject,LawId,SessionState FROM [dbo].[Voting Session] ORDER BY SessionId DESC", DataBaseManager.connect);
+                SqlCommand command = new SqlCommand("SELECT TOP 1 Duration,Date,Time,Subject,SessionState FROM [dbo].[Voting Session] ORDER BY SessionId DESC", DataBaseManager.connect);
 
                 if (DataBaseManager.connect.State == System.Data.ConnectionState.Open)
                     DataBaseManager.connect.Close();
@@ -47,7 +50,7 @@ namespace WebAPI_SQL.Useful_Stuff
                 var datatable = new DataTable();
                 datatable.Load(reader);
                 DataBaseManager.connect.Close();
-                VotingRoom votingRoom = new VotingRoom(Convert.ToInt32(datatable.Rows[0][0]), datatable.Rows[0][1].ToString(), datatable.Rows[0][2].ToString(), datatable.Rows[0][3].ToString(), datatable.Rows[0][4].ToString().Trim(' '), datatable.Rows[0][5].ToString().Trim(' '));
+                VotingRoom votingRoom = new VotingRoom(Convert.ToInt32(datatable.Rows[0][0]), datatable.Rows[0][1].ToString(), datatable.Rows[0][2].ToString(), datatable.Rows[0][3].ToString(), datatable.Rows[0][4].ToString().Trim(' '));
 
 
                 return votingRoom;
@@ -64,7 +67,7 @@ namespace WebAPI_SQL.Useful_Stuff
             try
             {
 
-                SqlCommand command = new SqlCommand("UPDATE [dbo].[Voting Session] SET SessionState='closed', TotalVotes=" + VotersNumber() + ",YesVotes=" + YesVotes() + ",NoVotes=" + NoVotes() + ",RetainedVotes=" + ReservedVotes() + ", FinalVote='" + MustVoted() + "' where SessionId=" + Useful_Stuff.Useful_Methodes.getLastSessionId(), DataBaseManager.connect);
+                SqlCommand command = new SqlCommand("UPDATE [dbo].[Voting Session] SET SessionState='closed', TotalVotes=" + VotersNumber() + ",YesVotes=" + YesVotes() + ",NoVotes=" + NoVotes() + ",RetainedVotes=" + ReservedVotes() + ", FinalVote='" + MustVoted()+ "', SessionFile="+GeneratePdf() + " where SessionId=" + Useful_Stuff.Useful_Methodes.getLastSessionId(), DataBaseManager.connect);
 
                 if (DataBaseManager.connect.State == System.Data.ConnectionState.Open)
                     DataBaseManager.connect.Close();
@@ -245,42 +248,19 @@ namespace WebAPI_SQL.Useful_Stuff
 
               return users;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 throw;
             }
 
 
         }
-        public static Law GetLaw(string lawref )
-        {
-
-
-            try
-            {
-                string Query = "Select *  from [dbo].[Law] where LawId = '" + lawref + "' ;";
-                SqlCommand command = new SqlCommand(Query, DataBaseManager.connect);
-                if (DataBaseManager.connect.State == System.Data.ConnectionState.Open)
-                    DataBaseManager.connect.Close();
-                DataBaseManager.connect.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                var datatable = new DataTable();
-                datatable.Load(reader);
-                DataBaseManager.connect.Close();
-                Law law = new Law(datatable.Rows[0][0].ToString().Trim(' '), int.Parse(datatable.Rows[0][1].ToString().Trim(' ')), int.Parse(datatable.Rows[0][2].ToString().Trim(' ')), datatable.Rows[0][3].ToString().Trim(' '));
-                return law;
-            }
-            catch (Exception ex)
-            {
-                Law law = new Law("", 0, 0, ex.Message);
-                return law;
-            }
-        }
+       
         public static VoteSessionResult GetResult()
         {
             try
             {
-                SqlCommand command = new SqlCommand("SELECT TOP 1 TotalVotes,YesVotes,NoVotes,RetainedVotes,FinalVote FROM [dbo].[Voting Session] ORDER BY SessionId DESC", DataBaseManager.connect);
+                SqlCommand command = new SqlCommand("SELECT TOP 1 TotalVotes,YesVotes,NoVotes,RetainedVotes,FinalVote,SessionFile FROM [dbo].[Voting Session] ORDER BY SessionId DESC", DataBaseManager.connect);
 
                 if (DataBaseManager.connect.State == System.Data.ConnectionState.Open)
                     DataBaseManager.connect.Close();
@@ -290,7 +270,7 @@ namespace WebAPI_SQL.Useful_Stuff
                 datatable.Load(reader);
                 DataBaseManager.connect.Close();
                 var x = datatable.Rows[0][0].ToString();
-                VoteSessionResult sessionResult = new VoteSessionResult(Convert.ToInt32(datatable.Rows[0][0]), Convert.ToInt32(datatable.Rows[0][1]), Convert.ToInt32(datatable.Rows[0][2]), Convert.ToInt32(datatable.Rows[0][3]), datatable.Rows[0][4].ToString().Trim(' '));
+                VoteSessionResult sessionResult = new VoteSessionResult(Convert.ToInt32(datatable.Rows[0][0]), Convert.ToInt32(datatable.Rows[0][1]), Convert.ToInt32(datatable.Rows[0][2]), Convert.ToInt32(datatable.Rows[0][3]), datatable.Rows[0][4].ToString().Trim(' '), (byte[])datatable.Rows[0][5]);
 
 
                 return sessionResult;
@@ -298,13 +278,25 @@ namespace WebAPI_SQL.Useful_Stuff
             catch (Exception ex)
             {
 
-                VoteSessionResult res = new VoteSessionResult(0, 0, 0, 0, ex.Message);
+                VoteSessionResult res = new VoteSessionResult(0, 0, 0, 0, ex.Message,null);
                 return res;
             }
             finally
             {
                 DataBaseManager.connect.Close();
+                
             }
         }
+        public static byte[] GeneratePdf()
+        {
+            var html = PDFTemplateGenerator.GeneratePdf();
+            var votesession = Useful_Methodes.getLastSession();
+            HtmlToPdf htmlToPdf = new HtmlToPdf();
+            var Pdf = htmlToPdf.ConvertHtmlString(html);
+            var file = Pdf.Save();
+            Pdf.Close();
+            return file;
+        }
+        
     }
 }

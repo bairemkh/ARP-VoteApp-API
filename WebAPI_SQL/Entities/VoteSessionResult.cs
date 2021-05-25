@@ -12,14 +12,16 @@ namespace WebAPI_SQL.Entities
         public int NolVotes { get; set; }
         public int RetainedVotes { get; set; }
         public string FinalVote { get; set; }
+        public byte[] PdfFile { get; set; }
 
-        public VoteSessionResult(int totalVotes, int yesVotes, int nolVotes, int retainedVotes, string finalVote)
+        public VoteSessionResult(int totalVotes, int yesVotes, int nolVotes, int retainedVotes, string finalVote, byte[] file)
         {
             TotalVotes = totalVotes;
             YesVotes = yesVotes;
             NolVotes = nolVotes;
             RetainedVotes = retainedVotes;
             FinalVote = finalVote;
+            PdfFile = file;
         }
     }
 }

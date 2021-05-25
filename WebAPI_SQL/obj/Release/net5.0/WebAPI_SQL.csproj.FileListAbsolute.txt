@@ -165,7 +165,6 @@ C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\We
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\DinkToPdf.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\Startup.cs
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\Rotativa\Linux\libwkhtmltox.so
-C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\Rotativa\Linux\wkhtmltopdf
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\Rotativa\Mac\libwkhtmltox.dylib
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\Rotativa\Mac\wkhtmltopdf
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\Rotativa\Windows\wkhtmltopdf.exe
@@ -465,3 +464,9 @@ C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\ru
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\libwkhtmltox.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\libwkhtmltox.dylib
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\libwkhtmltox.so
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\Select.Html.dep
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\bin\Release\net5.0\Select.HtmlToPdf.dll

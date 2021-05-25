@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PrLFGEP45I3U20FscAygnF8b+gEsT+02kde0eLq/fvvely4dc2Pq8LXekDXrfF+gRIamEiVQvPLPZs89iIm2nw==",
+  "dgSpecHash": "E/mUNYxz7yQawy+sRzaQ/rR8yzjnbERcT6r9+qd/zua1jtm66EF7ZLx6OlsEtEn03e8892feIL/Ylp3NjmYpHA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bairemkh\\Desktop\\PFE\\projet\\WebAPI_SQL\\WebAPI_SQL\\WebAPI_SQL.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\Bairemkh\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\6.0.0-preview.3.21201.13\\microsoft.aspnetcore.signalr.protocols.json.6.0.0-preview.3.21201.13.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\microsoft.aspnetcore.websockets\\2.2.0\\microsoft.aspnetcore.websockets.2.2.0.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
+    "C:\\Users\\Bairemkh\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.0.0\\microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\microsoft.codeanalysis.common\\3.7.0\\microsoft.codeanalysis.common.3.7.0.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\microsoft.codeanalysis.csharp\\3.7.0\\microsoft.codeanalysis.csharp.3.7.0.nupkg.sha512",
@@ -114,6 +115,7 @@
     "C:\\Users\\Bairemkh\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Bairemkh\\.nuget\\packages\\select.htmltopdf.netcore\\21.1.0\\select.htmltopdf.netcore.21.1.0.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\swashbuckle.aspnetcore\\6.1.2\\swashbuckle.aspnetcore.6.1.2.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.1.2\\swashbuckle.aspnetcore.swagger.6.1.2.nupkg.sha512",
     "C:\\Users\\Bairemkh\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.1.2\\swashbuckle.aspnetcore.swaggergen.6.1.2.nupkg.sha512",

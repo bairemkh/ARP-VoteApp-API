@@ -6,6 +6,45 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="libwkhtmltox.dll" />
+    <None Remove="libwkhtmltox.dylib" />
+    <None Remove="libwkhtmltox.so" />
+    <None Remove="Rotativa\Linux\libwkhtmltox.so" />
+    <None Remove="Rotativa\Linux\wkhtmltopdf" />
+    <None Remove="Rotativa\Mac\libwkhtmltox.dylib" />
+    <None Remove="Rotativa\Mac\wkhtmltopdf" />
+    <None Remove="Rotativa\Windows\wkhtmltopdf.exe" />
+    <None Remove="Rotativa\Windows\wkhtmltox.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="libwkhtmltox.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libwkhtmltox.dylib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libwkhtmltox.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Rotativa\Linux\libwkhtmltox.so">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Rotativa\Mac\libwkhtmltox.dylib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Rotativa\Mac\wkhtmltopdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Rotativa\Windows\wkhtmltopdf.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Rotativa\Windows\wkhtmltox.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DinkToPdf" Version="1.0.8" />
     <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.1" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
@@ -17,9 +56,16 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Select.HtmlToPdf.NetCore" Version="21.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
     <PackageReference Include="Wkhtmltopdf.NetCore" Version="5.0.2-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Rotativa\Linux\wkhtmltopdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -29,27 +75,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="libwkhtmltox.dylib">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Rotativa\Linux\libwkhtmltox.so">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Rotativa\Linux\wkhtmltopdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Rotativa\Mac\libwkhtmltox.dylib">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Rotativa\Mac\wkhtmltopdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Rotativa\Windows\wkhtmltopdf.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Rotativa\Windows\wkhtmltox.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="wkhtmltox.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

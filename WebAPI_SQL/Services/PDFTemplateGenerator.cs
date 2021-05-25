@@ -1,20 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using WebAPI_SQL.Entities;
 using WebAPI_SQL.Useful_Stuff;
+using Wkhtmltopdf.NetCore;
 
 namespace WebAPI_SQL.Services
 {
     public class PDFTemplateGenerator
     {
-        public static string GetHtmlString()
+        
+        
+        public static string GeneratePdf()
         {
-            List<User> users = Useful_Methodes.GetAllUsers();
-            StringBuilder SBuilder = new StringBuilder();
-            SBuilder.Append(@"<html>
+            try
+            {
+                List<User> users =  Useful_Methodes.GetAllUsers();
+                
+                StringBuilder SBuilder = new StringBuilder();
+                SBuilder.Append(@"<html>
 <head>
     <title>Last voting session result</title>
 </head>
@@ -94,15 +102,14 @@ namespace WebAPI_SQL.Services
         <h2 align=""center"" class=""typo"">مجلس نواب الشعب</h2>
     </div>
  <h1 align=""center"">Last voting session result</h1>");
-            var votesession = Useful_Methodes.getLastSession();
-            var law=Useful_Methodes.GetLaw(votesession.LawId);
-            var result = Useful_Methodes.GetResult();
-            SBuilder.AppendFormat(@"<h2 align=""center"">the voted law :{0}</h2>
-        <h2 align=""center"">the vote is about :{1}</h2>
+                var votesession = Useful_Methodes.getLastSession();
+                var Subject = votesession.VoteSubject;
+                var result = Useful_Methodes.GetResult();
+                SBuilder.AppendFormat(@"<h2 align=""center"">the vote is about :{0}</h2>
 <br/>
-<h3 align=""center"">the final vote is :{2}</h2>
-            ",law.LawDesc,votesession.VoteSubject,result.FinalVote);
-            SBuilder.Append(@"<table class=""styled-table"" align=""center"">
+<h3 align=""center"">the final vote is :{1}</h2>
+            ", Subject, result.FinalVote);
+                SBuilder.Append(@"<table class=""styled-table"" align=""center"">
         <thead>
             <tr>
                 <th align=""center"">Name</th>
@@ -115,52 +122,64 @@ namespace WebAPI_SQL.Services
             </tr>
         </thead>
         <tbody>");
-    
-            foreach(var user in users)
-            {
-                SBuilder.AppendFormat(@"<tr>
+
+                foreach (var user in users)
+                {
+                    SBuilder.AppendFormat(@"<tr>
                 <td>{0}</td>
                 <td>{1}</td>
                 <td>{2}</td>                
-                ",user.UserName,user.UserLastName,user.UserPoliticalParty);
-                var vote =Useful_Methodes.RetriveUserVote(user.UserId).Vote;
-                switch (vote.ToLower())
-                {
-                    case "yes":
-                SBuilder.Append(@"<td>X</td>
+                ", user.UserName, user.UserLastName, user.UserPoliticalParty);
+                    var vote = Useful_Methodes.RetriveUserVote(user.UserId).Vote;
+                    switch (vote.ToLower())
+                    {
+                        case "yes":
+                            SBuilder.Append(@"<td>X</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 </tr>");
-                        break;
-                    case "no":
-                        SBuilder.Append(@"<td></td>
+                            break;
+                        case "no":
+                            SBuilder.Append(@"<td></td>
                 <td>X</td>
                 <td></td>
                 <td></td>
                 </tr>");
-                        break;
-                    case "retained":
-                        SBuilder.Append(@"<td></td>
+                            break;
+                        case "retained":
+                            SBuilder.Append(@"<td></td>
                 <td></td>
                 <td>X</td>
                 <td></td> 
                 </tr>");
-                        break;
-                    default:
-                        SBuilder.Append(@"<td></td>
+                            break;
+                        default:
+                            SBuilder.Append(@"<td></td>
                 <td></td>
                 <td></td>
                 <td>X</td> 
                 </tr>");
-                        break;
+                            break;
+                    }
                 }
-            }
                 SBuilder.Append(@"</tbody>
                 </table>
                 </body>
                 </html>");
-            return SBuilder.ToString();
+                return SBuilder.ToString();
+                
+                
+            }
+            catch (WebException e)
+            {
+                return null;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
+        
     }
 }

@@ -1,11 +1,14 @@
-C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Startup.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\libwkhtmltox.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\libwkhtmltox.dylib
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\libwkhtmltox.so
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Rotativa\Linux\libwkhtmltox.so
-C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Rotativa\Linux\wkhtmltopdf
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Rotativa\Mac\libwkhtmltox.dylib
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Rotativa\Mac\wkhtmltopdf
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Rotativa\Windows\wkhtmltopdf.exe
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Rotativa\Windows\wkhtmltox.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Startup.cs
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\WebAPI_SQL.exe
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Select.Html.dep
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\appsettings.json
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.AspNetCore.Antiforgery.dll
@@ -80,6 +83,7 @@ C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\Pu
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.AspNetCore.StaticFiles.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.AspNetCore.WebSockets.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.CSharp.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.Data.SqlClient.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.Extensions.Configuration.Binder.dll
@@ -154,6 +158,7 @@ C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\Pu
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\System.Diagnostics.TraceSource.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\System.Diagnostics.Tracing.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\System.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\System.Drawing.Common.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\System.Drawing.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\System.Drawing.Primitives.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\refs\System.Dynamic.Runtime.dll
@@ -293,6 +298,7 @@ C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\Pu
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.SignalR.Client.Core.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.SignalR.Common.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Microsoft.CodeAnalysis.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Microsoft.CodeAnalysis.Razor.dll
@@ -319,6 +325,7 @@ C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\Pu
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Microsoft.OpenApi.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Select.HtmlToPdf.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Bairemkh\Desktop\PFE\projet\WebAPI_SQL\WebAPI_SQL\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

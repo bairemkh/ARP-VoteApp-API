@@ -8,7 +8,7 @@ namespace WebAPI_SQL.Entities
     public class VotingRoom
     {
         
-        public string LawId { get; set; }
+        
         public int duration { get; set; }
         public string date { get; set; }
         public string time { get; set; }
@@ -16,9 +16,9 @@ namespace WebAPI_SQL.Entities
         public string SessionState { get; set; }
         
 
-        public VotingRoom(int duration,  string date, string time, string voteSubject, string lawId, string sessionState)
+        public VotingRoom(int duration,  string date, string time, string voteSubject, string sessionState)
         {
-            this.LawId = lawId;
+            
             this.duration = duration;
             this.date = date;
             this.time = time;
